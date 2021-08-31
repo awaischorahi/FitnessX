@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Views.Onboarding.TrackGoal">
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    android:scaleType="fitXY"
+    android:id="@+id/track_image"
+    android:src="@drawable/track"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/poppins"
+    android:textSize="24sp"
+    android:layout_marginTop="50dp"
+    android:textStyle="bold"
+    android:textColor="#000"
+    android:layout_marginLeft="10dp"
+    android:text="Track Your Goal"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:maxLines="3"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Don't worry if you have trouble determining your goals, We can help you determine your goals and track your goals"/>
+</LinearLayout>
