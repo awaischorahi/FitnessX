@@ -9,8 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FitnessX">
-        <activity android:name=".Views.SignUp.SignUp"
-            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Views.Home.HomeActivity"></activity>
+        <activity android:name=".Views.ProfileDetails.Welcome" />
+        <activity android:name=".Views.SignUp.Login" />
+        <activity android:name=".Views.ProfileDetails.GoalActivity" />
+        <activity android:name=".Views.ProfileDetails.CompleteProfile" />
+        <activity
+            android:name=".Views.SignUp.SignUp"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Views.Splash.SplashScreen"
             android:screenOrientation="portrait">
@@ -22,7 +28,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
