@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Views.ProfileDetails.CompleteProfile">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/gym"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/gym" />
+
+            <TextView
+                android:id="@+id/lets_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gym"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/poppins"
+                android:text="Let’s complete your profile"
+                android:textColor="#000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/help_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lets_textview"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/poppins"
+                android:text="It will help us to know more about you!"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner_gender"
+                android:layout_width="315dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/help_textview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/spinner_drawable_left" />
+
+            <EditText
+                android:id="@+id/birthday"
+                android:layout_width="315dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/spinner_gender"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_edittext"
+                android:drawableLeft="@drawable/calender"
+                android:drawablePadding="5dp"
+                android:hint="Date of Birth"
+                android:padding="10dp" />
+
+            <LinearLayout
+                android:id="@+id/weightlayout"
+                android:layout_width="315dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/birthday"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <EditText
+                    android:id="@+id/weight"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1.7"
+                    android:background="@drawable/background_edittext"
+                    android:drawableLeft="@drawable/weight"
+                    android:drawablePadding="5dp"
+                    android:hint="Your Weight"
+                    android:layout_marginRight="4dp"
+                    android:padding="10dp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="0.3"
+                    android:src="@drawable/kg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cem_layout"
+                android:layout_width="315dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/weightlayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <EditText
+                    android:id="@+id/height"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1.7"
+                    android:background="@drawable/background_edittext"
+                    android:drawableLeft="@drawable/swap"
+                    android:drawablePadding="5dp"
+                    android:hint="Your Height"
+                    android:layout_marginRight="4dp"
+                    android:padding="10dp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="0.3"
+                    android:src="@drawable/cm" />
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:text="Next"
+                android:textColor="#fff"
+                android:id="@+id/next_completeprofile"
+                android:layout_width="315dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="4dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/cem_layout"
+                android:background="@drawable/btn_background_register"/>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
