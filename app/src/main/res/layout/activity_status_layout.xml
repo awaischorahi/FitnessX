@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp">
+
+    <TextView
+        android:id="@+id/textview_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/poppins"
+        android:text="Activity Status"
+        android:textColor="#000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="315dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/textview_status"
+        android:background="@drawable/background_target_check">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="4dp"
+            android:text="Heart Rate"
+            android:fontFamily="@font/poppins"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:id="@+id/text_heart_scrub"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="4dp"
+            android:text="78 BPM"
+            android:fontFamily="@font/poppins"
+            android:textColor="#92A3FD"
+            android:layout_below="@id/text_heart_scrub"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:id="@+id/heartrate_scrub"
+            />
+        <com.robinhood.spark.SparkView
+            android:id="@+id/sparkview"
+            android:layout_below="@+id/heartrate_scrub"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            app:spark_lineColor="#93A7FE"
+            app:spark_scrubEnabled="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

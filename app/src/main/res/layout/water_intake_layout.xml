@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="350dp"
+            android:layout_margin="4dp"
+            android:layout_weight="0.5"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp">
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="340dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/water_intake_drawable" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_heart_scrub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Water intake"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/heartrate_scrub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_heart_scrub"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="4 Liters"
+                    android:textColor="#92A3FD"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Real time updates"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_heart_scrub"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="6am - 8am"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_heart_scrub"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="600ml"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_heart_scrub"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="9am - 11am"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_heart_scrub"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="500ml"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_heart_scrub"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="11am - 2pm"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_heart_scrub"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="1000ml"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_heart_scrub"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="2pm - 4pm"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_heart_scrub"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="700ml"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_heart_scrub"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="4pm - now"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_heart_scrub"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="900ml"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_edittext"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_heart_scrub"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Sleep"
+                    android:textColor="#000"
+
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_heart_scrub"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="8h 20m"
+                    android:textColor="#92A3FD"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_margin="5dp"
+                    android:layout_width="120dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/sleepgraph" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_edittext"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_heart_scrub"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Calories"
+                    android:textColor="#000"
+
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_heart_scrub"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="760k Cal"
+                    android:textColor="#92A3FD"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

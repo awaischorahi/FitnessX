@@ -38,13 +38,15 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="20dp"
+                android:id="@+id/notification"
+                android:layout_height="20dp"
                 android:layout_alignParentRight="true"
                 android:layout_margin="20dp"
                 android:src="@drawable/notification" />
 
             <LinearLayout
+                android:id="@+id/bmi_layout"
                 android:layout_width="315dp"
                 android:layout_height="146dp"
                 android:layout_below="@id/name_of_user"
@@ -101,9 +103,58 @@
                     android:layout_width="0dp"
                     android:layout_height="100dp"
                     android:layout_margin="4dp"
-                    android:background="#9DCEFF"
-                    android:layout_weight="0.7" />
+                    android:layout_weight="0.7"
+                    android:background="#9DCEFF" />
             </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/target_layout"
+                android:layout_width="315dp"
+                android:layout_height="57dp"
+                android:layout_below="@id/bmi_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_target_check"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/target_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Today Target"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="68dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_background_register"
+                    android:text="Check"
+                    android:textAllCaps="false"
+                    android:textColor="#fff" />
+            </RelativeLayout>
+
+            <include layout="@layout/activity_status_layout"
+                android:layout_below="@+id/target_layout"
+                android:layout_height="200dp"
+                android:layout_marginTop="30dp"
+                android:id="@+id/activity_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_width="315dp"/>
+            <include layout="@layout/water_intake_layout"
+                android:layout_below="@+id/activity_layout"
+                android:layout_height="360dp"
+                android:id="@+id/activity_layout2"
+                android:layout_centerHorizontal="true"
+                android:layout_width="315dp"/>
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
 </RelativeLayout>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.Home.Fragments.ProfileFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back_notification"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/poppins"
+                android:text="Profile"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp">
+
+            <ImageView
+                android:id="@+id/notification_image_item"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/lunch" />
+
+            <TextView
+                android:id="@+id/notification_titleview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="4dp"
+                android:layout_toRightOf="@id/notification_image_item"
+                android:fontFamily="@font/poppins"
+                android:text="Stephani Wong"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/time_textview_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notification_titleview"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="4dp"
+                android:layout_toRightOf="@id/notification_image_item"
+                android:fontFamily="@font/poppins"
+                android:text="Lose a fat program"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn_background_register"
+                android:text="edit"
+                android:textAllCaps="false"
+                android:textColor="#fff" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="3"
+    android:layout_margin="10dp"
+    android:id="@+id/box_layouts"
+    android:layout_below="@+id/time_textview_notification"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_margin="4dp"
+
+        android:gravity="center_horizontal"
+        android:background="@drawable/background_edittext"
+        android:orientation="vertical"
+        android:layout_height="100dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="4dp"
+            android:text="180 cm"
+            android:fontFamily="@font/poppins"
+            android:layout_toRightOf="@id/glass"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:id="@+id/text_heart_scrub"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="4dp"
+            android:text="height"
+            android:fontFamily="@font/poppins"
+            android:textColor="#92A3FD"
+            android:layout_below="@id/text_heart_scrub"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_toRightOf="@id/glass"
+            android:id="@+id/heartrate_scrub"
+            />
+    </LinearLayout>
+ <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+     android:layout_margin="4dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/background_edittext"
+        android:orientation="vertical"
+        android:layout_height="100dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="4dp"
+            android:text="65 kg"
+            android:fontFamily="@font/poppins"
+            android:layout_toRightOf="@id/glass"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="4dp"
+            android:text="weight"
+            android:fontFamily="@font/poppins"
+            android:textColor="#92A3FD"
+            android:layout_below="@id/text_heart_scrub"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_toRightOf="@id/glass"
+            />
+    </LinearLayout>
+ <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:gravity="center_horizontal"
+     android:layout_margin="4dp"
+
+     android:background="@drawable/background_edittext"
+        android:orientation="vertical"
+        android:layout_height="100dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="4dp"
+            android:text="22yo"
+            android:fontFamily="@font/poppins"
+            android:layout_toRightOf="@id/glass"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="4dp"
+            android:text="age"
+            android:fontFamily="@font/poppins"
+            android:textColor="#92A3FD"
+            android:layout_below="@id/text_heart_scrub"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_toRightOf="@id/glass"
+            />
+    </LinearLayout>
+</LinearLayout>
+
+            <include
+                android:layout_below="@+id/box_layouts"
+                layout="@layout/account_layout"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:id="@+id/activityprogress"
+                android:layout_centerHorizontal="true"
+                android:layout_width="315dp" />
+            <include
+                android:layout_below="@+id/activityprogress"
+                layout="@layout/notification_layout_include"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:id="@+id/activitynotification"
+                android:layout_centerHorizontal="true"
+                android:layout_width="315dp" />
+            <include
+                android:layout_below="@+id/activitynotification"
+                layout="@layout/other_layout_include"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:id="@+id/activityothers"
+                android:layout_centerHorizontal="true"
+                android:layout_width="315dp" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

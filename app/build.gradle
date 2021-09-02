@@ -50,6 +50,9 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3' // use to handle android application
     implementation 'com.github.bumptech.glide:glide:4.11.0'
 
+    implementation 'com.robinhood.spark:spark:1.2.0'
+
+
 
 
 }
