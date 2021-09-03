@@ -19,6 +19,8 @@ import com.applicationdevelopers.fitnessx.Views.ProfileDetails.CompleteProfile;
 
 import org.bson.Document;
 
+import java.util.concurrent.atomic.AtomicReference;
+
 import io.realm.Realm;
 import io.realm.mongodb.App;
 import io.realm.mongodb.AppConfiguration;
@@ -41,6 +43,7 @@ public class SignUp extends AppCompatActivity {
     MongoCollection<Document> mongoCollection;
     String appID = "fitnessx-rxhnf";
     boolean this_field = false;
+    private AtomicReference<User> atomicReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,13 +60,7 @@ public class SignUp extends AppCompatActivity {
         app = new App(new AppConfiguration.Builder(appID).build());
 
         user = app.currentUser();
-        if (user != null) {
-            mongoClient = user.getMongoClient("mongodb-atlas");
-            mongoDatabase = mongoClient.getDatabase("FitnessX");
-            mongoCollection = mongoDatabase.getCollection("FitnessXCollection");
-
-
-        }
+        mongodb(user);
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,20 +104,32 @@ public class SignUp extends AppCompatActivity {
         } else {
             app.getEmailPassword().registerUserAsync(email_get, password_get, t -> {
                 if (t.isSuccess()) {
-                    User user1=app.currentUser();
                     Toast.makeText(this, "Successfully created account", Toast.LENGTH_SHORT).show();
-                    mongoCollection.insertOne(new Document("userID",user.getId())).getAsync(new App.Callback<InsertOneResult>() {
+
+                    mongodb(user);
+
+                    mongoCollection.insertOne(new Document("userid", user.getId()).append("firstname", firstname_get).append("lastname",lastname_get).append("email",email_get).append("password",password_get)).getAsync(new App.Callback<InsertOneResult>() {
                         @Override
                         public void onResult(App.Result<InsertOneResult> result) {
-                            startActivity(new Intent(getApplicationContext(),CompleteProfile.class));
+                            Toast.makeText(SignUp.this, "Inserted", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), CompleteProfile.class));
                         }
                     });
-
-
+                } else {
+                    Log.wtf("This value ->", t.getError().toString());
                 }
             });
 
         }
+
+    }
+
+    public void mongodb(User user) {
+        mongoClient = user.getMongoClient("mongodb-atlas");
+        mongoDatabase = mongoClient.getDatabase("FitnessX");
+
+        mongoCollection = mongoDatabase.getCollection("FitnessXCollection");
+
 
     }
 
