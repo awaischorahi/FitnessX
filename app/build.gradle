@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'com.google.gms.google-services'
 }
+apply plugin: 'realm-android'
 
 android {
     compileSdkVersion 30
@@ -9,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.applicationdevelopers.fitnessx"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -28,6 +29,10 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+}
+
+realm {
+    syncEnabled = true
 }
 
 dependencies {
