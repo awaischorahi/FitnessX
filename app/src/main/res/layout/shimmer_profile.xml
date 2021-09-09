@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.Home.Fragments.ProfileFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp">
+
+            <View
+                android:background="#e7e7e7"
+                android:id="@+id/notification_image_item"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/lunch" />
+
+            <View
+                android:background="#e7e7e7"
+                android:id="@+id/name_title1"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="4dp"
+                android:layout_toRightOf="@id/notification_image_item"
+                android:fontFamily="@font/poppins"
+                android:text="Stephani Wong"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/time_textview_notification"
+                android:layout_width="150dp"
+                android:background="#e7e7e7"
+                android:layout_height="20dp"
+                android:layout_below="@id/name_title1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="4dp"
+                android:layout_toRightOf="@id/notification_image_item"
+                android:fontFamily="@font/poppins"
+                android:text="Lose a fat program"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="80dp"
+                android:id="@+id/edit_btn"
+                android:background="#e7e7e7"
+
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:textAllCaps="false"
+                android:textColor="#fff" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_margin="10dp"
+                android:id="@+id/box_layouts"
+                android:layout_below="@+id/time_textview_notification"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_margin="4dp"
+                    android:background="#e7e7e7"
+
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:layout_height="100dp">
+
+                   </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_margin="4dp"
+                    android:gravity="center_horizontal"
+                    android:background="#e7e7e7"
+                    android:orientation="vertical"
+                    android:layout_height="100dp">
+</LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:gravity="center_horizontal"
+                    android:layout_margin="4dp"
+
+                    android:background="#e7e7e7"
+                    android:orientation="vertical"
+                    android:layout_height="100dp">
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:background="#e7e7e7"
+                android:layout_below="@+id/box_layouts"
+                android:layout_height="200dp"
+                android:layout_marginTop="30dp"
+                android:id="@+id/activityprogress"
+                android:layout_centerHorizontal="true"
+                android:layout_width="315dp" />
+            <View
+                android:layout_below="@+id/activityprogress"
+                android:background="#e7e7e7"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:id="@+id/activitynotification"
+                android:layout_centerHorizontal="true"
+                android:layout_width="315dp" />
+            <View
+                android:layout_below="@+id/activitynotification"
+                android:background="#e7e7e7"
+                android:layout_height="200dp"
+                android:layout_marginTop="30dp"
+                android:id="@+id/activityothers"
+                android:layout_centerHorizontal="true"
+                android:layout_width="315dp" />
+        </RelativeLayout>
+
+</RelativeLayout>
