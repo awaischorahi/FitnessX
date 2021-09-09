@@ -3,6 +3,7 @@ package com.applicationdevelopers.fitnessx;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -24,5 +25,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
         viewPager.setAdapter(new OnboardingAdapter(getSupportFragmentManager(),4));
         viewPager.setCurrentItem(0);
+
     }
+
 }

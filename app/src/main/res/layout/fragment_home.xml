@@ -4,9 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Views.Home.HomeFragment">
-
+<com.facebook.shimmer.ShimmerFrameLayout
+    android:layout_width="match_parent"
+    android:id="@+id/shimmerlayout"
+    android:layout_height="match_parent">
+    <include layout="@layout/shimmer_layout"/>
+</com.facebook.shimmer.ShimmerFrameLayout>
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
+        android:id="@+id/nested_scroll_view"
+        android:visibility="gone"
         android:layout_height="match_parent">
 
         <RelativeLayout
@@ -37,13 +44,6 @@
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
-            <ImageView
-                android:layout_width="20dp"
-                android:id="@+id/notification"
-                android:layout_height="20dp"
-                android:layout_alignParentRight="true"
-                android:layout_margin="20dp"
-                android:src="@drawable/notification" />
 
             <LinearLayout
                 android:id="@+id/bmi_layout"

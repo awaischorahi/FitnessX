@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.applicationdevelopers.fitnessx.Model.NotificationModel;
@@ -33,8 +32,7 @@ public class Notification extends RecyclerView.Adapter<Notification.ViewHolderCl
     @Override
     public void onBindViewHolder(Notification.ViewHolderClass holder, int position) {
         holder.title.setText(list.get(position).getTitle());
-        holder.time.setText(list.get(position).getTime());
-
+        holder.time.setText(list.get(position).getBody());
     }
 
     @Override

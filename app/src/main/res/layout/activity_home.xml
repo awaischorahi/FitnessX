@@ -5,9 +5,65 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Views.Home.HomeActivity">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+<!--
+
+            <ImageView
+                android:id="@+id/back_notification"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/poppins"
+                android:text="Home"
+                android:textColor="#000"
+                android:id="@+id/toolbar_Text"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+
+                android:layout_width="30dp"
+                android:id="@+id/notification"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:padding="3dp"
+                android:layout_marginTop="2dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/notification" />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:text="0"
+                android:id="@+id/notification_count"
+                android:layout_margin="4dp"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:padding="4dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/notification_red"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
 
     <FrameLayout
-
+        android:layout_below="@id/toolbar"
         android:id="@+id/home_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

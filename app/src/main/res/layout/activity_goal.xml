@@ -6,13 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Views.ProfileDetails.GoalActivity">
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/goal_textview"
@@ -38,22 +31,16 @@
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp">
-
-            </RelativeLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerview_confirm_goal"
                 android:layout_width="match_parent"
-                android:layout_height="490dp"
+                android:layout_height="match_parent"
                 android:layout_below="@id/help_textview"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="4dp"
                 android:clipToPadding="false"
+                android:layout_above="@+id/confirm_goal"
                 android:overScrollMode="never"
                 android:foregroundGravity="center"
                 android:layout_marginBottom="4dp"
@@ -64,13 +51,12 @@
                 android:id="@+id/confirm_goal"
                 android:layout_width="315dp"
                 android:layout_height="48dp"
-                android:layout_below="@+id/recyclerview_confirm_goal"
+                android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="28dp"
-                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="30dp"
                 android:background="@drawable/btn_background_register"
                 android:text="Confirm"
                 android:textColor="#fff" />
-        </RelativeLayout>
-    </androidx.core.widget.NestedScrollView>
+
 </RelativeLayout>

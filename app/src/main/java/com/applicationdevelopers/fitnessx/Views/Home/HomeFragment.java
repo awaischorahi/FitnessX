@@ -3,8 +3,10 @@ package com.applicationdevelopers.fitnessx.Views.Home;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.core.widget.NestedScrollView;
 import androidx.fragment.app.Fragment;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +22,7 @@ import com.anychart.charts.Pie;
 import com.applicationdevelopers.fitnessx.Adapter.SparkAdapter;
 import com.applicationdevelopers.fitnessx.R;
 import com.applicationdevelopers.fitnessx.Views.NotificationActivity.NotificationActivity;
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.robinhood.spark.SparkView;
 
 import java.util.ArrayList;
@@ -30,8 +33,8 @@ public class HomeFragment extends Fragment {
     String[] BMI = {"normal", "hard"};
     int[] value = {4, 10};
     SparkView sparkView;
+    ShimmerFrameLayout shimmerFrameLayout;
     TextView spark_textview;
-    ImageView notificationimageview;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -59,18 +62,26 @@ public class HomeFragment extends Fragment {
                 //Toast.makeText(getContext(), ""+value, Toast.LENGTH_SHORT).show();
             }
         });
-        notificationimageview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getContext(), NotificationActivity.class ));
-            }
-        });
+
         return view;
     }
 
     public void Init(View view) {
         anyChartView = view.findViewById(R.id.piechart1);
         sparkView = view.findViewById(R.id.sparkview);
-        notificationimageview = view.findViewById(R.id.notification);
+        shimmerFrameLayout = view.findViewById(R.id.shimmerlayout);
+        shimmerFrameLayout.startShimmer();
+        NestedScrollView nestedScrollView=view.findViewById(R.id.nested_scroll_view);
+        nestedScrollView.setVisibility(View.GONE);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                shimmerFrameLayout.startShimmer();
+                shimmerFrameLayout.hideShimmer();
+                shimmerFrameLayout.setVisibility(View.GONE);
+                nestedScrollView.setVisibility(View.VISIBLE);
+            }
+        },8000);
+
     }
 }

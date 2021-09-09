@@ -1,9 +1,15 @@
 package com.applicationdevelopers.fitnessx.Model;
 
 public class NotificationModel {
-    public NotificationModel(String title, String time) {
+
+    private String title;
+   private String body;
+    public NotificationModel() {
+    }
+
+    public NotificationModel(String title, String body) {
         this.title = title;
-        this.time = time;
+        this.body = body;
     }
 
     public String getTitle() {
@@ -14,14 +20,12 @@ public class NotificationModel {
         this.title = title;
     }
 
-    public String getTime() {
-        return time;
+    public String getBody() {
+        return body;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setBody(String body) {
+        this.body = body;
     }
 
-    String title;
-String time;
 }

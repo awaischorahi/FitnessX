@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "427231220541",
+    "firebase_url": "https://fitnessx-3e5ff-default-rtdb.firebaseio.com",
     "project_id": "fitnessx-3e5ff",
     "storage_bucket": "fitnessx-3e5ff.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "427231220541-vugsnolqktreaaqi7una65tdrg9qj8cv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.applicationdevelopers.fitnessx",
+            "certificate_hash": "2e43243e66d72cd8ad3fd39d80cb942924f4f3f4"
+          }
+        },
         {
           "client_id": "427231220541-oo5llb5f4pu11jib2qekofcf3h5dmvck.apps.googleusercontent.com",
           "client_type": 3
