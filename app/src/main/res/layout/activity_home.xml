@@ -11,6 +11,7 @@
         android:layout_height="55dp">
 
         <RelativeLayout
+            android:background="#F6F3F3"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 <!--
@@ -65,6 +66,7 @@
     <FrameLayout
         android:layout_below="@id/toolbar"
         android:id="@+id/home_layout"
+        android:background="#e7e7e7"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/bottom" />

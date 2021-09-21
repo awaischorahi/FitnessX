@@ -20,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.applicationdevelopers.fitnessx.R;
+import com.applicationdevelopers.fitnessx.SharedPreferenceClass.OnboardingSharedPreference;
 import com.applicationdevelopers.fitnessx.Views.ProfileDetails.CompleteProfile;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -67,6 +68,7 @@ public class SignUp extends AppCompatActivity {
     GoogleSignInClient mGoogleSignInClient;
     public static final int result = 99;
     TextView login_textView;
+    OnboardingSharedPreference onboardingSharedPreference;
 
     boolean this_field = false;
     private final static Pattern Password = Pattern.compile("^" +
@@ -117,6 +119,8 @@ public class SignUp extends AppCompatActivity {
                 .build();
         mGoogleSignInClient = GoogleSignIn.getClient(this, options);
 
+        onboardingSharedPreference = new OnboardingSharedPreference(this);
+        onboardingSharedPreference.checkSharedPreferenceOnboarding(true);
     }
 
     public void ButtonMethods() {
@@ -305,4 +309,8 @@ public class SignUp extends AppCompatActivity {
     }
 */
 
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+    }
 }

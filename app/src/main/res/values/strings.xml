@@ -6,7 +6,8 @@
     <string-array name="gender">
         <item>
             Choose gender
-        </item><item>
+        </item>
+        <item>
             male
         </item>
         <item>

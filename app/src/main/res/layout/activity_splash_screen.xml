@@ -5,33 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Views.SplashScreen">
-<TextView
+<ImageView
     android:layout_centerInParent="true"
-    android:textColor="#000"
     android:id="@+id/fitness_textview"
-    android:textSize="40sp"
-    android:textStyle="bold"
-    android:fontFamily="@font/poppins"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:src="@drawable/logo"
+    android:layout_width="300dp"
+    android:scaleType="fitCenter"
+    android:layout_height="350dp"
     android:text="Fitness"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="42sp"
-        android:fontFamily="@font/poppins"
-        android:layout_toRightOf="@id/fitness_textview"
-        android:text="X"
-        android:textColor="#CC8FED"
-        android:textStyle="bold"
-        android:layout_centerInParent="true"/>
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textSize="16sp"
-    android:paddingLeft="28dp"
-    android:layout_centerHorizontal="true"
-    android:fontFamily="@font/poppins"
-    android:layout_below="@+id/fitness_textview"
-    android:text="Everybody Can Train" />
+
 </RelativeLayout>

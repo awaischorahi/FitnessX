@@ -58,9 +58,11 @@ public class ProfileFragment extends Fragment {
         ageofuser = view.findViewById(R.id.age_show);
         weight = view.findViewById(R.id.weight_show);
         height = view.findViewById(R.id.height_Show);
+
         nestedScrollView = view.findViewById(R.id.nested_scroll_view_profile);
         shimmerFrameLayout = view.findViewById(R.id.shimer_profile);
         nestedScrollView.setVisibility(View.GONE);
+
         firebaseAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Users");
         userid = firebaseAuth.getCurrentUser().getUid();
@@ -74,7 +76,7 @@ public class ProfileFragment extends Fragment {
                 shimmerFrameLayout.setVisibility(View.GONE);
                 nestedScrollView.setVisibility(View.VISIBLE);
             }
-        },8000);
+        }, 8000);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +97,7 @@ public class ProfileFragment extends Fragment {
                 getDataFromFirebaseDatabase();
 
             }
-        },1000);
+        }, 1000);
     }
 
     public void getDataFromFirebaseDatabase() {

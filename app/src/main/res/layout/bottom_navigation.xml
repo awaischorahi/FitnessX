@@ -1,61 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:weightSum="5"
-        android:layout_marginTop="20dp"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="0dp"
-            android:id="@+id/homebutt"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical"
-            android:layout_height="wrap_content"
-            android:src="@drawable/home"/>
-        <ImageView
-            android:id="@+id/activity"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical"
-            android:layout_height="wrap_content"
-            android:src="@drawable/activity"/>
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:id="@+id/camera"
-            android:layout_gravity="center_vertical"
-            android:layout_height="wrap_content"
-            android:src="@drawable/camera"/>
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:id="@+id/profile"
-            android:layout_gravity="center_vertical"
-            android:layout_height="wrap_content"
-            android:src="@drawable/profile"/>
-    </LinearLayout>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    android:layout_width="wrap_content"
-    android:layout_centerHorizontal="true"
+    android:background="#F8F5F5"
     android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#ECEBE9">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/homebutt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:src="@drawable/home" />
+
+            <ImageView
+                android:id="@+id/activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:src="@drawable/activity" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/camera"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:src="@drawable/camera" />
+
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:src="@drawable/profile" />
+        </LinearLayout>
+
+   </RelativeLayout>
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_centerHorizontal="true">
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_pedometer"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:elevation="10dp"
         android:background="@color/white"
         android:backgroundTint="@color/white"
-        app:borderWidth="0dp"
-        android:layout_marginBottom="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp"
-        android:src="@drawable/search"
-        android:layout_height="wrap_content"
-        />
+        android:src="@drawable/ic_baseline_run_circle_24"
+        app:borderWidth="0dp" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
-</RelativeLayout>
+
+    </RelativeLayout>

@@ -60,7 +60,6 @@ public class Login extends AppCompatActivity {
     DatabaseReference databaseReference;
     FirebaseAuth firebaseAuth;
     String userid;
-    OnboardingSharedPreference onboardingSharedPreference;
     ProgressDialog progressDialog;
     ImageView google_login;
     GoogleSignInClient mgoogleClient;
@@ -103,8 +102,6 @@ public class Login extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Users");
         progressDialog = new ProgressDialog(this);
-        onboardingSharedPreference = new OnboardingSharedPreference(this);
-        onboardingSharedPreference.checkSharedPreferenceOnboarding(true);
         GoogleSignInOptions options = new GoogleSignInOptions.Builder()
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
